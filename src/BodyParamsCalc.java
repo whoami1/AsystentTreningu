@@ -1,6 +1,10 @@
 
 public class BodyParamsCalc extends Calculator {
     BodyParams bp = new BodyParams();
+
+    private double fat;
+    private double meat;
+
     private double calcBmi()
     {
         double heightM = (double)user.getHeight()/100;
@@ -14,7 +18,6 @@ public class BodyParamsCalc extends Calculator {
         double hcsel = 0.3937;
         double ncsel = 0.3937;
         double res2sel = 2.2046;
-        double fat;
 
         if(user.getGender().contains("woman"))
         {
@@ -34,15 +37,14 @@ public class BodyParamsCalc extends Calculator {
         double hcsel = 0.3937;
         double ncsel = 0.3937;
         double res2sel = 2.2046;
-        double meat;
 
         if(gender.contains("woman"))
         {
-            meat = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+            meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
         else
         {
-            meat = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+            meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
         return meat;
     }

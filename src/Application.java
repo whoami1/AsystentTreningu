@@ -7,8 +7,8 @@ public class Application
     {
         System.out.println("Hello World!");
 
-        MainWindow mainWindow = new MainWindow();
+        //MainWindow mainWindow = new MainWindow();
 
-        mainWindow.showMainWindow();
+        //mainWindow.showMainWindow();
     }
 }

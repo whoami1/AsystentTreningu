@@ -72,34 +72,34 @@ public class BodyParams
         this.LBM = LBM;
     }
 
-    public String bmiClassification(double result)
+    public String bmiClassification()
     {
         String bmiClass = "";
-        if(result<16.0)
+        if(BMI<16.0)
         {
             bmiClass = "wyglodzenie";
         }
-        else if ((result>16.0) && (result<16.99))
+        else if ((BMI>16.0) && (BMI<16.99))
         {
             bmiClass = "wychudzenie";
         }
-        else if ((result>17.0) && (result<18.49))
+        else if ((BMI>17.0) && (BMI<18.49))
         {
             bmiClass = "niedowaga";
         }
-        else if ((result>18.5) && (result<24.99))
+        else if ((BMI>18.5) && (BMI<24.99))
         {
             bmiClass = "wartosc prawidlowa";
         }
-        else if ((result>25.0) && (result<29.99))
+        else if ((BMI>25.0) && (BMI<29.99))
         {
             bmiClass = "nadwaga";
         }
-        else if((result>30.0) && (result<34.99))
+        else if((BMI>30.0) && (BMI<34.99))
         {
             bmiClass = "I st otylosci";
         }
-        else if((result>35.0) && (result<39.99))
+        else if((BMI>35.0) && (BMI<39.99))
         {
             bmiClass = "II st otylosci (otylosc kliniczna)";
         }

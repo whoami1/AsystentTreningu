@@ -11,4 +11,24 @@ public class Activity
         this.name = name;
         this.ratio = ratio;
     }
+
+    public double getRatio()
+    {
+        return ratio;
+    }
+
+    public void setRatio(double ratio)
+    {
+        this.ratio = ratio;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }

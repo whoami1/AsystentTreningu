@@ -1,6 +1,8 @@
 import sun.applet.Main;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Micha³ Wrzesieñ on 2016-01-20.
@@ -17,6 +19,15 @@ public class StartWindow extends JFrame
     public StartWindow(MainWindow mainWindow)
     {
         this.mainWindow = mainWindow;
+
+        calcWaterFatBonesButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                mainWindow.openFatAdditionalParametresWindow();
+            }
+        });
     }
 
     public void showStartWindow()

@@ -1,5 +1,6 @@
-
-public class BodyParamsCalc extends Calculator {
+/*
+public class BodyParamsCalc extends Calculator
+{
     BodyParams bp = new BodyParams();
 
     private double fat;
@@ -75,3 +76,4 @@ public class BodyParamsCalc extends Calculator {
         bp.setWater(calcWater());
     }
 }
+*/

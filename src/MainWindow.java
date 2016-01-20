@@ -62,4 +62,15 @@ public class MainWindow extends JFrame
         startWindow.showStartWindow();
     }
 
+    public void openFatAdditionalParametresWindow()
+    {
+        FatAdditionalParametres fatAdditionalParametres = new FatAdditionalParametres(this);
+        fatAdditionalParametres.showDialog();
+    }
+
+    public void openWaterFatBonesResultDialog()
+    {
+        WaterFatBonesResultsDialog waterFatBonesResultsDialog = new WaterFatBonesResultsDialog();
+        waterFatBonesResultsDialog.showDialog();
+    }
 }

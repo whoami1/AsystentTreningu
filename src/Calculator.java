@@ -3,7 +3,7 @@
  */
 public abstract class Calculator
 {
-    private User user;
+    protected User user;
 
     public void setUser(User user)
     {

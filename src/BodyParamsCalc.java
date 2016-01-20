@@ -10,7 +10,7 @@ public class BodyParamsCalc extends Calculator {
         double heightM = (double)user.getHeight()/100;
         return (double)(user.getWeight()/(double)(heightM*heightM));
     }
-    private double calcFat()
+    private void calcFat()
     {
         double hsel = 0.3937;
         double wsel = 2.2046;
@@ -27,9 +27,8 @@ public class BodyParamsCalc extends Calculator {
         {
             fat = 86.01 * Math.log(user.getHipSize() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
         }
-        return fat;
     }
-    private double calcMeat()
+    private void calcMeat()
     {
         double hsel = 0.3937;
         double wsel = 2.2046;
@@ -46,7 +45,6 @@ public class BodyParamsCalc extends Calculator {
         {
             meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
-        return meat;
     }
     private double calcBonesWeight()
     {
@@ -70,6 +68,10 @@ public class BodyParamsCalc extends Calculator {
 
     @java.lang.Override
     public BodyParams calculate() {
-        return null;
+        bp.setBMI(calcBmi());
+        bp.setFat(fat);
+        bp.setLBM(meat);
+        bp.setWeightOfBones(calcBonesWeight());
+        bp.setWater(calcWater());
     }
 }

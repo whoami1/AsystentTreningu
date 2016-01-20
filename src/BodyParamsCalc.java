@@ -73,5 +73,6 @@ public class BodyParamsCalc extends Calculator
         bp.setLBM(meat);
         bp.setWeightOfBones(calcBonesWeight());
         bp.setWater(calcWater());
+        return bp;
     }
 }

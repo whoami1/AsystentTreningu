@@ -28,6 +28,14 @@ public class StartWindow extends JFrame
                 mainWindow.openFatAdditionalParametresWindow();
             }
         });
+
+
+        calcCaloriesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mainWindow.openCaloriesWindow();
+            }
+        });
     }
 
     public void showStartWindow()

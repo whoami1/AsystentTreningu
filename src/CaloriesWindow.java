@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * Created by Micha� Wrzesie� on 2016-01-20.
  */
-public class CaloriesWindow
+public class CaloriesWindow extends JFrame
 {
     private JTextField timeActivityField;
     private JComboBox activitiesComboBox;
@@ -75,13 +75,14 @@ public class CaloriesWindow
         });
     }
 
-    public static void main(String[] args)
+    public void showWindow()
     {
-        JFrame frame = new JFrame("CaloriesWindow");
-        frame.setContentPane(new CaloriesWindow(null).CaloriesCalculator);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+        setTitle("CaloriesWindow");
+        setContentPane(new CaloriesWindow(null).CaloriesCalculator);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
 }

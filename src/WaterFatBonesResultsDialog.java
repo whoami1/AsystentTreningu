@@ -10,6 +10,7 @@ public class WaterFatBonesResultsDialog extends JDialog
     private JLabel fat1ResultLabel;
     private JLabel fat2ResultLabel;
     private JLabel bonesWeightLabel;
+    private JButton obliczButton;
 
     private MainWindow mainWindow;
 
@@ -26,7 +27,6 @@ public class WaterFatBonesResultsDialog extends JDialog
 
         BodyParams bodyParams = calculator.calculate();
 
-        waterResultLabel.setName(Double.toString(bodyParams.getWater()));
 
         buttonOK.addActionListener(new ActionListener()
         {
@@ -62,6 +62,18 @@ public class WaterFatBonesResultsDialog extends JDialog
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+        obliczButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                waterResultLabel.setText(Double.toString(bodyParams.getWater()));
+                fat1ResultLabel.setText(Double.toString(bodyParams.getFat()));
+                fat2ResultLabel.setText(Double.toString(bodyParams.getLBM()));
+                bonesWeightLabel.setText(Double.toString(bodyParams.getWeightOfBones()));
+            }
+        });
     }
 
     private void onOK()
@@ -78,8 +90,8 @@ public class WaterFatBonesResultsDialog extends JDialog
 
     public void showDialog()
     {
-        WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog(mainWindow);
-        dialog.pack();
-        dialog.setVisible(true);
+        //WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog(mainWindow);
+        pack();
+        setVisible(true);
     }
 }

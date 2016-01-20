@@ -3,7 +3,10 @@
  */
 public class User
 {
+    public enum Gender { Male, Female }
+
     private String name;
+    private Gender gender;
     private double weight;
     private double height;
     private int age;
@@ -19,6 +22,16 @@ public class User
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public Gender getGender()
+    {
+        return gender;
+    }
+
+    public void setGender(Gender gender)
+    {
+        this.gender = gender;
     }
 
     public double getWeight()

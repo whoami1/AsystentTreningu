@@ -12,51 +12,63 @@ public class BodyParams
     private double BMI;
     private double LBM;
 
-    public Date getDate() {
+    public Date getDate()
+    {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Date date)
+    {
         this.date = date;
     }
 
-    public double getWater() {
+    public double getWater()
+    {
         return water;
     }
 
-    public void setWater(double water) {
+    public void setWater(double water)
+    {
         this.water = water;
     }
 
-    public double getFat() {
+    public double getFat()
+    {
         return fat;
     }
 
-    public void setFat(double fat) {
+    public void setFat(double fat)
+    {
         this.fat = fat;
     }
 
-    public double getWeightOfBones() {
+    public double getWeightOfBones()
+    {
         return weightOfBones;
     }
 
-    public void setWeightOfBones(double weightOfBones) {
+    public void setWeightOfBones(double weightOfBones)
+    {
         this.weightOfBones = weightOfBones;
     }
 
-    public double getBMI() {
+    public double getBMI()
+    {
         return BMI;
     }
 
-    public void setBMI(double BMI) {
+    public void setBMI(double BMI)
+    {
         this.BMI = BMI;
     }
 
-    public double getLBM() {
+    public double getLBM()
+    {
         return LBM;
     }
 
-    public void setLBM(double LBM) {
+    public void setLBM(double LBM)
+    {
         this.LBM = LBM;
     }
 }

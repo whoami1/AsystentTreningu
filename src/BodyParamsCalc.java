@@ -1,12 +1,12 @@
 
 public class BodyParamsCalc extends Calculator {
-
+    BodyParams bp = new BodyParams();
     private double calcBmi()
     {
         double heightM = (double)user.getHeight()/100;
         return (double)(user.getWeight()/(double)(heightM*heightM));
     }
-    private Double[] calcFat()
+    private double calcFat()
     {
         double hsel = 0.3937;
         double wsel = 2.2046;
@@ -14,25 +14,56 @@ public class BodyParamsCalc extends Calculator {
         double hcsel = 0.3937;
         double ncsel = 0.3937;
         double res2sel = 2.2046;
+        double fat;
 
-        Double[] tablicaWynikow = new Double[2];
-
-        if(gender.contains("woman"))
+        if(user.getGender().contains("woman"))
         {
-            tablicaWynikow[0] = 163.205 * Math.log(user.getHipSize() * wcsel + user.getWaistline() * hcsel - user.getNeckSize() * ncsel) / Math.log(10) - 97.684 * Math.log(user.getHeight() * hsel) / Math.log(10) - 78.387;
-            tablicaWynikow[1] = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+            fat = 163.205 * Math.log(user.getHipSize() * wcsel + user.getWaistline() * hcsel - user.getNeckSize() * ncsel) / Math.log(10) - 97.684 * Math.log(user.getHeight() * hsel) / Math.log(10) - 78.387;
         }
         else
         {
-            tablicaWynikow[0] = 86.01 * Math.log(user.getHipSize() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
-            tablicaWynikow[1] = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+            fat = 86.01 * Math.log(user.getHipSize() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
         }
-        return tablicaWynikow;
+        return fat;
     }
+    private double calcMeat()
+    {
+        double hsel = 0.3937;
+        double wsel = 2.2046;
+        double wcsel = 0.3937;
+        double hcsel = 0.3937;
+        double ncsel = 0.3937;
+        double res2sel = 2.2046;
+        double meat;
 
+        if(gender.contains("woman"))
+        {
+            meat = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+        }
+        else
+        {
+            meat = user.getWeight() * wsel * (100-tablicaWynikow[0]) * 0.01 / res2sel;
+        }
+        return meat;
+    }
     private double calcBonesWeight()
     {
+        return 0.15*bp.getLBM();
+    }
 
+    private double calcWater()
+    {
+        double wynik;
+
+        if (user.getGender().contains("woman"))
+        {
+            wynik = -2.097 + (0.1069*user.getHeight()) + (0.2466*user.getWeight());
+        }
+        else
+        {
+            wynik = 2.447 - (0.09156*user.getAge()) + (0.1074*user.getHeight()) + (0.3362*user.getWeight());
+        }
+        return wynik;
     }
 
     @java.lang.Override

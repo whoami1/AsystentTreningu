@@ -1,3 +1,5 @@
+import sun.applet.Main;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -10,8 +12,12 @@ public class FatAdditionalParametres extends JDialog
     private JTextField neckSizeField;
     private JTextField hipSizeField;
 
-    public FatAdditionalParametres()
+    private MainWindow mainWindow;
+
+    public FatAdditionalParametres(MainWindow mainWindow)
     {
+        this.mainWindow = mainWindow;
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -54,6 +60,7 @@ public class FatAdditionalParametres extends JDialog
 
     private void onOK()
     {
+        mainWindow.openWaterFatBonesResultDialog();
 // add your code here
         dispose();
     }
@@ -61,14 +68,13 @@ public class FatAdditionalParametres extends JDialog
     private void onCancel()
     {
 // add your code here if necessary
-        dispose();
+        this.dispose();
     }
 
-    public static void main(String[] args)
+    public void showDialog()
     {
-        FatAdditionalParametres dialog = new FatAdditionalParametres();
+        FatAdditionalParametres dialog = new FatAdditionalParametres(mainWindow);
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
     }
 }

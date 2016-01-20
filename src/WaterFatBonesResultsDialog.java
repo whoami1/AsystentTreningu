@@ -65,11 +65,10 @@ public class WaterFatBonesResultsDialog extends JDialog
         dispose();
     }
 
-    public static void main(String[] args)
+    public static void showDialog()
     {
         WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
     }
 }

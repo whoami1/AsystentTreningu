@@ -12,6 +12,18 @@ public class BodyParams
     private double BMI;
     private double LBM;
 
+    private double calories;
+
+    public double getCalories()
+    {
+        return calories;
+    }
+
+    public void setCalories(double calories)
+    {
+        this.calories = calories;
+    }
+
     public Date getDate()
     {
         return date;

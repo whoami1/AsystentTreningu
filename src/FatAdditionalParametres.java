@@ -12,6 +12,18 @@ public class FatAdditionalParametres extends JDialog
     private JTextField neckSizeField;
     private JTextField hipSizeField;
 
+    public String getWaistLineField() {
+        return waistLineField.getText();
+    }
+
+    public String getNeckSizeField() {
+        return neckSizeField.getText();
+    }
+
+    public String getHipSizeField() {
+        return hipSizeField.getText();
+    }
+
     private MainWindow mainWindow;
 
     public FatAdditionalParametres(MainWindow mainWindow)
@@ -60,6 +72,9 @@ public class FatAdditionalParametres extends JDialog
 
     private void onOK()
     {
+        mainWindow.user.setWaistline(Double.parseDouble(getWaistLineField()));
+        mainWindow.user.setNeckSize(Double.parseDouble(getNeckSizeField()));
+        mainWindow.user.setHipSize(Double.parseDouble(getHipSizeField()));
         mainWindow.openWaterFatBonesResultDialog();
 // add your code here
         dispose();

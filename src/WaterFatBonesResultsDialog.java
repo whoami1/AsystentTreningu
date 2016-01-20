@@ -17,6 +17,8 @@ public class WaterFatBonesResultsDialog extends JDialog
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
+
+
         buttonOK.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)

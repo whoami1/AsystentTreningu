@@ -84,4 +84,5 @@ public class CaloriesCalculator extends Calculator
         frame.pack();
         frame.setVisible(true);
     }
+
 }

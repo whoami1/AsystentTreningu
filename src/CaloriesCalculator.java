@@ -24,8 +24,14 @@ public class CaloriesCalculator extends Calculator
     private Activity currentActivity;
     private int activityTime;
 
-    public CaloriesCalculator()
+    private MainWindow mainWindow;
+
+    public CaloriesCalculator(MainWindow mainWindow)
     {
+        this.mainWindow = mainWindow;
+
+        //mainWindow.user.
+
         try
         {
             Scanner in = new Scanner(new File("activities.txt"));

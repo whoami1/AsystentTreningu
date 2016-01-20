@@ -11,13 +11,22 @@ public class WaterFatBonesResultsDialog extends JDialog
     private JLabel fat2ResultLabel;
     private JLabel bonesWeightLabel;
 
-    public WaterFatBonesResultsDialog()
+    private MainWindow mainWindow;
+
+    public WaterFatBonesResultsDialog(MainWindow mainWindow)
     {
+        this.mainWindow = mainWindow;
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
+        Calculator calculator = new BodyParamsCalc();
+        calculator.setUser(mainWindow.user);
 
+        BodyParams bodyParams = calculator.calculate();
+
+        waterResultLabel.setName(Double.toString(bodyParams.getWater()));
 
         buttonOK.addActionListener(new ActionListener()
         {
@@ -67,9 +76,9 @@ public class WaterFatBonesResultsDialog extends JDialog
         dispose();
     }
 
-    public static void showDialog()
+    public void showDialog()
     {
-        WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog();
+        WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog(mainWindow);
         dialog.pack();
         dialog.setVisible(true);
     }

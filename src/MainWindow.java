@@ -101,7 +101,7 @@ public class MainWindow extends JFrame
 
     public void openWaterFatBonesResultDialog()
     {
-        WaterFatBonesResultsDialog waterFatBonesResultsDialog = new WaterFatBonesResultsDialog();
+        WaterFatBonesResultsDialog waterFatBonesResultsDialog = new WaterFatBonesResultsDialog(this);
         waterFatBonesResultsDialog.showDialog();
     }
 }

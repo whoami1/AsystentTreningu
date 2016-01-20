@@ -50,7 +50,7 @@ public class BodyParamsCalc extends Calculator {
     }
     private double calcBonesWeight()
     {
-        return 0.15*bp.getLBM();
+        return 0.15*meat;
     }
 
     private double calcWater()

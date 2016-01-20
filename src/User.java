@@ -7,12 +7,12 @@ public class User
 
     private String name;
     private Gender gender;
-    private double weight;
-    private double height;
-    private int age;
-    private double waistline;
-    private double neckSize;
-    private double hipSize;
+    private Double weight;
+    private Double height;
+    private Integer age;
+    private Double waistline;
+    private Double neckSize;
+    private Double hipSize;
 
     public String getName()
     {

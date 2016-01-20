@@ -1,10 +1,6 @@
-import sun.applet.Main;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 /**
  * Created by Adamus on 2016-01-20.
@@ -15,18 +11,53 @@ public class MainWindow extends JFrame
     private JRadioButton maleRadioButton;
     private JRadioButton femaleRadioButton;
     private JPanel StartPanel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField ageField;
+    private JTextField weightField;
+    private JTextField heightField;
     private JButton nextButton;
+
+    public User user = null;
+
+    public String getNameField()
+    {
+        return nameField.getText();
+    }
+
+    public String getAgeField() {
+        return ageField.getText();
+    }
+
+    public String getWeightField() {
+        return weightField.getText();
+    }
+
+    public String getHeightField() {
+        return heightField.getText();
+    }
 
     public MainWindow()
     {
+        user = new User();
+
         nextButton.addActionListener(new ActionListener()
         {
             @Override
             public void actionPerformed(ActionEvent e)
             {
+                user.setName(getNameField());
+                user.setAge(Integer.parseInt(getAgeField()));
+                user.setWeight(Double.parseDouble(getWeightField()));
+                user.setHeight(Double.parseDouble(getHeightField()));
+
+                if (maleRadioButton.isContentAreaFilled())
+                {
+                    user.setGender(User.Gender.Male);
+                }
+                else
+                {
+                    user.setGender(User.Gender.Female);
+                }
+
                 openStartWindow();
                 closeMainWindow();
             }

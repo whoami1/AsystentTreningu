@@ -7,6 +7,6 @@ public class StartWindow
 {
     private JPanel StartPanel;
     private JButton calcWaterFatBonesButton;
-    private JButton obliczenieIloœciKaloriiPotrzebnychButton;
-    private JButton porównanieWynikówButton;
+    private JButton calcCaloriesButton;
+    private JButton compareButton;
 }

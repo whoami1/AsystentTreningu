@@ -1,4 +1,3 @@
-/*
 public class BodyParamsCalc extends Calculator
 {
     BodyParams bp = new BodyParams();
@@ -20,7 +19,7 @@ public class BodyParamsCalc extends Calculator
         double ncsel = 0.3937;
         double res2sel = 2.2046;
 
-        if(user.getGender().contains("woman"))
+        if(user.getGender()== User.Gender.Female)
         {
             fat = 163.205 * Math.log(user.getHipSize() * wcsel + user.getWaistline() * hcsel - user.getNeckSize() * ncsel) / Math.log(10) - 97.684 * Math.log(user.getHeight() * hsel) / Math.log(10) - 78.387;
         }
@@ -38,7 +37,7 @@ public class BodyParamsCalc extends Calculator
         double ncsel = 0.3937;
         double res2sel = 2.2046;
 
-        if(gender.contains("woman"))
+        if(user.getGender()==User.Gender.Female)
         {
             meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
@@ -56,7 +55,7 @@ public class BodyParamsCalc extends Calculator
     {
         double wynik;
 
-        if (user.getGender().contains("woman"))
+        if (user.getGender()==User.Gender.Female)
         {
             wynik = -2.097 + (0.1069*user.getHeight()) + (0.2466*user.getWeight());
         }
@@ -76,4 +75,3 @@ public class BodyParamsCalc extends Calculator
         bp.setWater(calcWater());
     }
 }
-*/

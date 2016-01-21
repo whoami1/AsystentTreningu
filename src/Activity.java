@@ -15,8 +15,8 @@ public class Activity
 
     /**
      * Inicjalizuje nową aktywność za pomocą współczynnika i nazwy.
-     * @param ratio
-     * @param name
+     * @param ratio współczynnik spalania kalorii
+     * @param name nazwa opisywanej aktywności
      */
     public Activity(double ratio, String name)
     {

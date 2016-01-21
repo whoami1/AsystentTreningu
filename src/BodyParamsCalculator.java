@@ -1,26 +1,38 @@
-/*
- * klasa służąca do obliczeń parametrów ciała
+/**
+ * Klasa służąca do obliczeń parametrów ciała
  */
-
 public class BodyParamsCalculator extends Calculator
 {
     BodyParams bp = new BodyParams();
 
+    /**
+     * Zmienna opisująca zawartość tkanki tłuszczowej w organizmie.
+     */
     private double fat;
+
+    /**
+     * Zmienna opisująca wagę tkanki mięśniowej.
+     */
     private double meat;
-    /*
-     * funkcja licząca BMI
+
+    /**
+     * Funkcja licząca BMI
+     * @return wartość BMI
      */
     private double calcBmi()
     {
         double heightM = (double)user.getHeight()/100;
         return (double)(user.getWeight()/(double)(heightM*heightM));
     }
-    /*
-     * funkcja licząca zawartość tkanki tłuszczowej w organiźmie
+
+    /**
+     * Funkcja licząca zawartość tkanki tłuszczowej w organizmie.
      */
     private void calcFat()
     {
+        /**
+         * Stałe używane w obliczeniach tkanki tłuszczowej w organizmie.
+         */
         double hsel = 0.3937;
         double wsel = 2.2046;
         double wcsel = 0.3937;
@@ -37,8 +49,9 @@ public class BodyParamsCalculator extends Calculator
             fat = 86.01 * Math.log(user.getWaistline() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
         }
     }
-    /*
-     * funkcja licząca wagę tkanki mięśniowej
+
+    /**
+     * Funkcja licząca wagę tkanki mięśniowej.
      */
     private void calcMeat()
     {
@@ -58,15 +71,19 @@ public class BodyParamsCalculator extends Calculator
             meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
     }
-    /*
-     * funkcja licząca wage kości na podstawie wagi taknki mięśniowej
+
+    /**
+     * Funkcja licząca wagę kości na podstawie wagi tkanki mięśniowej.
+     * @return waga kości
      */
     private double calcBonesWeight()
     {
         return 0.15*meat;
     }
-    /*
-     * funkcja licząca zawartość wody w organiźmie
+
+    /**
+     * Funkcja licząca zawartość wody w organizmie.
+     * @return zawartość wody w organizmie
      */
     private double calcWater()
     {
@@ -82,8 +99,10 @@ public class BodyParamsCalculator extends Calculator
         }
         return wynik;
     }
-    /*
-     * funkcja przekazująca wyniki do klasy BodyParams
+
+    /**
+     * Funkcja przekazująca wyniki do klasy BodyParams
+     * @return wyniki
      */
     @java.lang.Override
     public BodyParams calculate()

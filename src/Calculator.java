@@ -10,7 +10,7 @@ public abstract class Calculator
 
     /**
      * Ustawia aktualnego użytkownika, dla którego przeprowadzane są obliczenia.
-     * @param user
+     * @param user aktualny użytkownik
      */
     public void setUser(User user)
     {

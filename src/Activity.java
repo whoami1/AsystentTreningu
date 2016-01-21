@@ -17,18 +17,8 @@ public class Activity
         return ratio;
     }
 
-    public void setRatio(double ratio)
-    {
-        this.ratio = ratio;
-    }
-
     public String getName()
     {
         return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
     }
 }

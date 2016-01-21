@@ -49,7 +49,7 @@ public class MainWindow extends JFrame
                 user.setWeight(Double.parseDouble(getWeightField()));
                 user.setHeight(Double.parseDouble(getHeightField()));
 
-                if (maleRadioButton.isContentAreaFilled())
+                if (maleRadioButton.isSelected())
                 {
                     user.setGender(User.Gender.Male);
                 }

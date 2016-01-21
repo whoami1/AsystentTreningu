@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class FatAdditionalParametres extends JDialog
@@ -9,6 +10,7 @@ public class FatAdditionalParametres extends JDialog
     private JTextField waistLineField;
     private JTextField neckSizeField;
     private JTextField hipSizeField;
+    private JLabel hipLabel;
 
     public String getWaistLineField()
     {
@@ -60,6 +62,19 @@ public class FatAdditionalParametres extends JDialog
                 onCancel();
             }
         });
+
+        setLocationRelativeTo(mainWindow);
+
+        if(mainWindow.user.getGender() == User.Gender.Male)
+        {
+            hipSizeField.setEnabled(false);
+            hipLabel.setForeground(Color.GRAY);
+        }
+        else
+        {
+            hipSizeField.setEnabled(true);
+            hipLabel.setForeground(Color.BLACK);
+        }
 
 // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener()

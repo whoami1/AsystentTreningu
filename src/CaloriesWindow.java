@@ -79,7 +79,7 @@ public class CaloriesWindow extends JFrame
     {
         setTitle("CaloriesWindow");
         setContentPane(CaloriesCalculator);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);

@@ -22,7 +22,7 @@ public class WaterFatBonesResultsDialog extends JDialog
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
-        Calculator calculator = new BodyParamsCalc();
+        Calculator calculator = new BodyParamsCalculator();
         calculator.setUser(mainWindow.user);
 
         BodyParams bodyParams = calculator.calculate();

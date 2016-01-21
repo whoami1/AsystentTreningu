@@ -1,4 +1,4 @@
-public class BodyParamsCalc extends Calculator
+public class BodyParamsCalculator extends Calculator
 {
     BodyParams bp = new BodyParams();
 

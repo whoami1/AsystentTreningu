@@ -67,7 +67,10 @@ public class BodyParamsCalc extends Calculator
     }
 
     @java.lang.Override
-    public BodyParams calculate() {
+    public BodyParams calculate()
+    {
+        calcFat();
+        calcMeat();
         bp.setBMI(calcBmi());
         bp.setFat(fat);
         bp.setLBM(meat);

@@ -63,7 +63,7 @@ public class CaloriesWindow extends JFrame
 
                 int time = Integer.parseInt(timeActivityField.getText());
                 for(Activity a : activities)
-                    if(a.getName().equals(e.getActionCommand()))
+                    if(a.getName().equals(activitiesComboBox.getSelectedItem().toString()))
                     {
                         calculator.setActivity(a, time);
                         break;
@@ -78,7 +78,7 @@ public class CaloriesWindow extends JFrame
     public void showWindow()
     {
         setTitle("CaloriesWindow");
-        setContentPane(new CaloriesWindow(null).CaloriesCalculator);
+        setContentPane(CaloriesCalculator);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);

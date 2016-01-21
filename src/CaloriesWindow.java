@@ -1,10 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
 import java.text.NumberFormat;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -31,8 +28,8 @@ public class CaloriesWindow extends JFrame
 
         try
         {
-            Scanner in = new Scanner(new File("activities.txt"));
-            while(in.hasNext())
+            Scanner in = new Scanner(CaloriesWindow.class.getResourceAsStream("activities.txt"));
+            while (in.hasNext())
             {
                 //double ratio = Double.parseDouble(in.next());
                 NumberFormat nf = NumberFormat.getInstance();
@@ -41,17 +38,16 @@ public class CaloriesWindow extends JFrame
                 String name = in.nextLine();
                 activities.add(new Activity(ratio, name));
             }
-        }
-        catch (IOException e)
+        } catch (Exception e)
         {
             System.out.println("Nie znaleziono pliku 'activities'.txt");
         }
-        catch (ParseException e)
+        /*catch (ParseException e)
         {
             e.printStackTrace();
-        }
+        }*/
 
-        for(Activity a : activities)
+        for (Activity a : activities)
             activitiesComboBox.addItem(a.getName());
 
         obliczButton.addActionListener(new ActionListener()
@@ -62,8 +58,8 @@ public class CaloriesWindow extends JFrame
                 calculator = new CaloriesCalculator();
 
                 int time = Integer.parseInt(timeActivityField.getText());
-                for(Activity a : activities)
-                    if(a.getName().equals(activitiesComboBox.getSelectedItem().toString()))
+                for (Activity a : activities)
+                    if (a.getName().equals(activitiesComboBox.getSelectedItem().toString()))
                     {
                         calculator.setActivity(a, time);
                         break;

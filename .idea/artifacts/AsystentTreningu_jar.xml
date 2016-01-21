@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AsystentTreningu:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AsystentTreningu_jar</output-path>
+    <root id="archive" name="AsystentTreningu.jar">
+      <element id="module-output" name="AsystentTreningu" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,92 @@
+5.2 Aerobik: lagodne cwiczenia
+7.3 Aerobik: intensywne cwiczenia
+5.1 Akt milosny
+5.7 Badminton
+8.1 Bieganie: wolno (1 km w 8 minut)
+9.9 Bieganie: srednio (1 km w 6,5 minuty)
+12.4 Bieganie: szybko (1 km w 5 minut)
+16.5 Bieganie: bardzo szybko (1 km w 4 minuty)
+9.3 Boks: sparing
+2.8 Chod: powolne tempo
+3.5 Chod: umiarkowane tempo
+4.5 Chod: szybkie tempo
+0.35 Czytanie
+2.1 Czytanie glosno
+3.5 Golf
+1.5 Gotowanie
+4.3 Gra w kregle
+4.0 Grabienie trawnika
+9.3 Jazda konno
+5.3 Jazda na deskorolce
+7.0 Jazda na lyzwach
+8.2 Jazda na nartach biegowych
+6.3 Jazda na nartach wodnych
+7.3 Jazda na nartach zjazdowych
+5.7 Jazda na rolkach
+4.3 Jazda na rowerze: (10 km/h)
+8.6 Jazda na rowerze: (20 km/h)
+5.4 Kajakarstwo
+8.5 Kolarstwo gorskie
+4.5 Koszenie trawnika: kosiarka mechaniczna
+6.0 Koszenie trawnika: reczna kosiarka
+8.4 Koszykowka
+0.6 Lezenie
+3.0 lowienie ryb
+5.7 Malowanie
+3.3 Mycie okien
+4.4 Mycie samochodu
+4.5 Odkurzanie
+6.0 Odgarnianie sniegu lopata
+9.1 Pilka nozna: zawodowa
+8.1 Pilka nozna: amatorska
+12.0 Pilka reczna
+6.1 Plywanie: rekreacyjnie
+5.0 Praca w ogrodzie
+2.5 Praca zawodowa: Biurowa, chodzaca
+1.5 Praca zawodowa: Biurowa, siedzaca
+3.5 Praca zawodowa: Elektryk
+3.5 Praca zawodowa: Fryzjer
+6.0 Praca zawodowa: Gornik
+8.0 Praca zawodowa: Hutnik
+3.5 Praca zawodowa: Hydraulik
+1.5 Praca zawodowa: Kierowca
+2.5 Praca zawodowa: Krawiec
+7.0 Praca zawodowa: Murarz
+2.5 Praca zawodowa: Nauczyciel
+4.0 Praca zawodowowa: Piekarz
+4.0 Praca zawodowa: Pielegniarka
+6.0 Praca zawodowa: Pracownik budowy
+3.0 Praca zawodowa: Sprzedawca
+3.5 Praca zawodowa: Stolarz
+12.0 Praca zawodowa: Strazak
+8.0 Praca zawodowa: Tragarz
+2.0 Prasowanie
+2.3 Robienie zakupow
+10.5 Rower stacjonarny: intensywny wysilek
+7.0 Rower stacjonarny: umiarkowany wysilek
+8.4 Siatkowka: plaza
+3.7 Siatkowka: rekreacyjnie
+4.5 Siatkowka: zawody
+3.5 Silownia: lekkie cwiczenia
+7.0 Silownia: cwiczenia srednio nasilone
+8.5 Silownia: cwiczenia intensywne
+8.2 Skakanka: rekreacyjnie
+9.9 Skakanka: intensywnie
+2.8 Spacer: powolne tempo
+3.5 Spacer: umiarkowane tempo
+4.5 Spacer: szybkie tempo
+3.5 Sprzatanie domu
+7.1 Squash: rekreacynie
+9.9 Squash: zawody
+7.8 Steping: wolno
+9.9 Steping: szybko
+1.5 spiewanie
+3.1 Taniec: niezbyt szybka muzyka
+5.5 Taniec: szybka muzyka
+6.5 Tenis stolowy
+8.8 Tenis ziemny
+4,4 Wchodzenie po schodach
+3.0 Wedkowanie
+8.5 Wioslarstwo
+10.8 Wspinaczka skalkowa
+2.0 Zmywanie naczyń 

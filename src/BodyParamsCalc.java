@@ -21,11 +21,11 @@ public class BodyParamsCalc extends Calculator
 
         if(user.getGender()== User.Gender.Female)
         {
-            fat = 163.205 * Math.log(user.getHipSize() * wcsel + user.getWaistline() * hcsel - user.getNeckSize() * ncsel) / Math.log(10) - 97.684 * Math.log(user.getHeight() * hsel) / Math.log(10) - 78.387;
+            fat = 163.205 * Math.log(user.getWaistline() * wcsel + user.getHipSize() * hcsel - user.getNeckSize() * ncsel) / Math.log(10) - 97.684 * Math.log(user.getHeight() * hsel) / Math.log(10) - 78.387;
         }
         else
         {
-            fat = 86.01 * Math.log(user.getHipSize() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
+            fat = 86.01 * Math.log(user.getWaistline() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
         }
     }
     private void calcMeat()

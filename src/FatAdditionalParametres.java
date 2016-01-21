@@ -76,7 +76,7 @@ public class FatAdditionalParametres extends JDialog
         mainWindow.user.setWaistline(Double.parseDouble(getWaistLineField()));
         mainWindow.user.setNeckSize(Double.parseDouble(getNeckSizeField()));
 
-        if (mainWindow.user.getGender().equals(User.Gender.Female))
+        if (mainWindow.user.getGender()==(User.Gender.Female))
         {
             mainWindow.user.setHipSize(Double.parseDouble(getHipSizeField()));
         }

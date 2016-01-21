@@ -1,15 +1,24 @@
+/*
+ * klasa służąca do obliczeń parametrów ciała
+ */
+
 public class BodyParamsCalculator extends Calculator
 {
     BodyParams bp = new BodyParams();
 
     private double fat;
     private double meat;
-
+    /*
+     * funkcja licząca BMI
+     */
     private double calcBmi()
     {
         double heightM = (double)user.getHeight()/100;
         return (double)(user.getWeight()/(double)(heightM*heightM));
     }
+    /*
+     * funkcja licząca zawartość tkanki tłuszczowej w organiźmie
+     */
     private void calcFat()
     {
         double hsel = 0.3937;
@@ -28,6 +37,9 @@ public class BodyParamsCalculator extends Calculator
             fat = 86.01 * Math.log(user.getWaistline() * wcsel - user.getNeckSize() * ncsel) / Math.log(10) - 70.041 * Math.log(user.getHeight() * hsel) / Math.log(10) + 36.76;
         }
     }
+    /*
+     * funkcja licząca wagę tkanki mięśniowej
+     */
     private void calcMeat()
     {
         double hsel = 0.3937;
@@ -46,11 +58,16 @@ public class BodyParamsCalculator extends Calculator
             meat = user.getWeight() * wsel * (100-fat) * 0.01 / res2sel;
         }
     }
+    /*
+     * funkcja licząca wage kości na podstawie wagi taknki mięśniowej
+     */
     private double calcBonesWeight()
     {
         return 0.15*meat;
     }
-
+    /*
+     * funkcja licząca zawartość wody w organiźmie
+     */
     private double calcWater()
     {
         double wynik;
@@ -65,7 +82,9 @@ public class BodyParamsCalculator extends Calculator
         }
         return wynik;
     }
-
+    /*
+     * funkcja przekazująca wyniki do klasy BodyParams
+     */
     @java.lang.Override
     public BodyParams calculate()
     {

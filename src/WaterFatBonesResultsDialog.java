@@ -92,6 +92,7 @@ public class WaterFatBonesResultsDialog extends JDialog
     {
         //WaterFatBonesResultsDialog dialog = new WaterFatBonesResultsDialog(mainWindow);
         pack();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 }
